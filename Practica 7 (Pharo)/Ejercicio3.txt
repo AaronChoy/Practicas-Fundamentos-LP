@@ -1,0 +1,16 @@
+|numero vari| 
+
+numero:=(UIManager default request:'Ingrese el numero')asInteger .
+
+[numero >= 1]whileTrue:[ 
+	vari:= numero.
+	Transcript show: vari;show: ': '.
+	[vari ~= 1] whileTrue: [
+		(vari\\2 == 0)
+			ifTrue:[ vari := vari/2]
+			ifFalse:[ vari := (vari*3)+1.].
+			Transcript show: '*'.
+	].
+	Transcript show: '*';cr.
+	numero:= numero - 1.
+].  
